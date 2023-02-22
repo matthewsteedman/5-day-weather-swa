@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 import Card from '../../components/card';
 
 const HomeContainer = () => {
-  const API_ENDPOINT = `http://api.openweathermap.org/data/2.5/forecast?q=Cape%20Town&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
+  const API_ENDPOINT = `https://api.openweathermap.org/data/2.5/forecast?q=Cape%20Town&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
   const [weatherData, setWeatherData] = useState([]);
 
   useEffect(() => {
