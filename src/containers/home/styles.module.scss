@@ -1,0 +1,60 @@
+@function vw($screenWidth, $pixelValue) {
+  $result: ($pixelValue/$screenWidth) * 100vw;
+  @return $result;
+}
+
+.container {
+  margin-top: vw(320, 30);
+  margin-left: vw(320, 20);
+  margin-right: vw(320, 20);
+  margin-bottom: vw(320, 50);
+  h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    font-size: vw(320, 20);
+  }
+}
+.CardContainer {
+  margin-top: vw(320, 30);
+  display: flex;
+  flex-direction: column;
+  row-gap: vw(320, 20);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    margin-top: vw(1024, 50);
+    margin-left: vw(1024, 41);
+    margin-right: vw(1024, 41);
+    margin-bottom: vw(1024, 50);
+    h1 {
+      font-size: vw(1024, 40);
+    }
+  }
+  .CardContainer {
+    margin-top: vw(1280, 50);
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: vw(1024, 20);
+    column-gap: vw(1024, 20);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    margin-top: vw(1280, 70);
+    margin-left: vw(1280, 100);
+    margin-right: vw(1280, 100);
+    margin-bottom: vw(1280, 50);
+    h1 {
+      font-size: vw(1280, 60);
+    }
+  }
+  .CardContainer {
+    margin-top: vw(1280, 70);
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: vw(1280, 20);
+    column-gap: vw(1280, 20);
+  }
+}
