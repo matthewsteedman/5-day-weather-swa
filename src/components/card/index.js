@@ -1,5 +1,6 @@
 import styles from './styles.module.scss';
 const Card = ({ data }) => {
+  console.log(new Date(data.dt_txt), 'data');
   return (
     <div className={styles.container}>
       <div className={styles.IconContainer}>
@@ -9,6 +10,7 @@ const Card = ({ data }) => {
         />
       </div>
       <h3>{new Date(data.dt_txt).toLocaleDateString()}</h3>
+      <h3>{new Date(data.dt_txt).toLocaleTimeString()}</h3>
       <p>{Math.round(data.main.temp)}&deg;C</p>
       <p>
         High: {Math.round(data.main.temp_max)}&deg;C / Low:
