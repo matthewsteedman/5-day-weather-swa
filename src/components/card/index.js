@@ -9,6 +9,7 @@ const Card = ({ data }) => {
         />
       </div>
       <h3>{new Date(data.dt_txt).toLocaleDateString()}</h3>
+      <h3>{new Date(data.dt_txt).toLocaleTimeString()}</h3>
       <p>{Math.round(data.main.temp)}&deg;C</p>
       <p>
         High: {Math.round(data.main.temp_max)}&deg;C / Low:
