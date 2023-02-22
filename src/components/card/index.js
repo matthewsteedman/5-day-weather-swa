@@ -1,6 +1,5 @@
 import styles from './styles.module.scss';
 const Card = ({ data }) => {
-  console.log(new Date(data.dt_txt), 'data');
   return (
     <div className={styles.container}>
       <div className={styles.IconContainer}>
